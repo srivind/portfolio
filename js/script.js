@@ -10,26 +10,28 @@ function appLoaded() {
     });  
 
     $(document).ready(function(){
-        $('.slick-slider').slick({
-            slidesToShow: 3,
-            infinite:true,
-            autoplay: true,
-            dots: true,
-            arrows: false,
-            responsive: [
-                {
-                  breakpoint: 906, 
-                  settings: {
-                    slidesToShow: 2 
-                  }
-                },
-                {
-                    breakpoint: 550, 
+        setTimeout(() => {   
+            $('.slick-slider').slick({
+                slidesToShow: 3,
+                infinite:true,
+                autoplay: true,
+                dots: true,
+                arrows: false,
+                responsive: [
+                    {
+                    breakpoint: 906, 
                     settings: {
-                      slidesToShow: 1 
+                        slidesToShow: 2 
                     }
-                }
-            ]
-        });
+                    },
+                    {
+                        breakpoint: 550, 
+                        settings: {
+                        slidesToShow: 1 
+                        }
+                    }
+                ]
+            });
+        }, 2000);
     });
 }
